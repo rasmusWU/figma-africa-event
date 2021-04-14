@@ -1,0 +1,151 @@
+.frontPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &__registerNav {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        &__Btn {
+            border: 0;
+            margin: 2% 3% 0 0;
+            padding: 1em 5em;
+            font-family: 'Poppins', sans-serif;
+            color: #001958;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.1em;
+            border-radius: 30px;
+            letter-spacing: 1px;
+            display: none;
+        }
+    }
+    &__content {
+        margin-top: 7%;
+        margin: 7% 0 8% 10%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        & img {
+            margin-right: 3em;
+            margin-top: 0.5em;
+        }
+    }
+    &__text {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        &__titleText {
+            font-size: 2.7em;
+            line-height: 110%;
+            & span {
+                text-transform: uppercase;
+            }
+        }
+        &__date {
+            margin-top: 1.5em;
+            font-weight: 500;
+            font-size: 1.4em;
+        }
+        &__place {
+            margin-top: 1em;
+            font-weight: 500;
+            font-size: 1.4em;
+        }
+        &__registerBtn {
+            border: 0;
+            margin: 8% 3% 0 0;
+            padding: 1em 5em;
+            font-family: 'Poppins', sans-serif;
+            color: #001958;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1.1em;
+            border-radius: 30px;
+            letter-spacing: 1px;
+        }
+        &__disclaimer {
+            margin-top: 1em;
+            font-weight: 400;
+            font-size: 1.4em;
+        }
+    }
+    &__top {
+        background-image: url('./img/Rectangle.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 70vh;
+    }
+    &__gradient {
+        background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+        width: 100%;
+        height: 100%;
+    }
+    &__bot {
+        margin-top: 3em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & h2 {
+            margin-left: 1em;
+            font-family: 'Poppins', sans-serif;
+            color: #001958;
+            text-transform: uppercase;
+            font-size: 2.7em;
+        }
+    }
+    &__stats {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__title {
+            font-family: 'Poppins', sans-serif;
+            color: #4F4F4F;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        &__number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3em;
+            font-weight: 700;
+            color: #828282;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .frontPage {
+        &__registerNav {
+            &__Btn {
+                display: block;
+            }
+        }
+        &__top {
+            height: 90vh;
+        }
+        &__content {
+            flex-direction: row;
+            width: 30%;
+        }
+        &__bot {
+            & h2 {
+                margin-left: 0;
+            }
+        }
+        &__stats {
+            display: grid;
+            grid-template-rows: 100%;
+            grid-template-columns: repeat(4, 25%);
+            margin: 1em 0;
+        }
+    }
+}
+
